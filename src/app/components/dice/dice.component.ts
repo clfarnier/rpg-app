@@ -21,6 +21,10 @@ export class DiceComponent implements OnInit {
     this.diceToRoll.push({id: Math.floor(Math.random()), faces: this.diceFaces, result: 0});
   }
 
+  remove(id: number) {
+    this.diceToRoll = this.diceToRoll.filter(dice => dice.id !== id)
+  }
+
   roll() {
     this.diceResults = [];
     this.totalResult = 0;

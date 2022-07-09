@@ -4,6 +4,7 @@
 <ul>
   <li *ngFor="let dice of diceToRoll">
     {{dice.faces}}
+    <button (click)="remove(dice.id)">Supprimer</button>
   </li>
 </ul>
 <button (click)="roll()">Lancer le(s) dé(s)</button>
