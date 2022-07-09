@@ -1,0 +1,17 @@
+<p>Valeur du dé</p>
+<input name="dice-value" [(ngModel)]="diceFaces">
+<button (click)="add()">Ajouter</button>
+<ul>
+  <li *ngFor="let dice of diceToRoll">
+    {{dice.faces}}
+  </li>
+</ul>
+<button (click)="roll()">Lancer le(s) dé(s)</button>
+<p>Résultats</p>
+<ul>
+  <li *ngFor="let dice of diceResults">
+    {{dice.result}} / {{dice.faces}}
+  </li>
+</ul>
+<p>Total : {{totalResult}}</p>
+
